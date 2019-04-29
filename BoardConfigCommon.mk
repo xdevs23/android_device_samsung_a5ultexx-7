@@ -20,3 +20,15 @@ LOCAL_PATH := device/samsung/a5-common
 
 # Include board config fragments
 include $(LOCAL_PATH)/board/*.mk
+
+# Audio
+BOARD_USES_ALSA_AUDIO              := true
+AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
+USE_CUSTOM_AUDIO_POLICY            := 1
+USE_XML_AUDIO_POLICY_CONF          := 1
+
+# Touchscreen
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/sec/sec_touchscreen/wake_gesture"
+endif
+  endif
+endif
