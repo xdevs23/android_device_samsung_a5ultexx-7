@@ -29,6 +29,4 @@ USE_XML_AUDIO_POLICY_CONF          := 1
 
 # Touchscreen
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/sec/sec_touchscreen/wake_gesture"
-endif
-  endif
-endif
+
