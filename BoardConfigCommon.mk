@@ -13,6 +13,9 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #
+# Properties
+TARGET_SYSTEM_PROP := device/samsung/msm8916-common/system.prop
+
 # Inherit from common
 include device/samsung/msm8916-common/BoardConfigCommon.mk
 
