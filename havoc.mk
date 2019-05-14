@@ -4,9 +4,10 @@ PRODUCT_RELEASE_NAME := Samsung Galaxy A5 2015
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 720
+TARGET_BOOT_ANIMATION_RES := 720
 
-# Inherit some common Paranoid Android stuff.
-$(call inherit-product, vendor/pa/main.mk)
+# Inherit some common HavocOS stuff.
+$(call inherit-product, vendor/havoc/config/common.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
