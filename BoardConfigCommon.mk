@@ -13,9 +13,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #
-# Properties
-TARGET_SYSTEM_PROP := device/samsung/msm8916-common/system.prop
-
 # Inherit from common
 include device/samsung/msm8916-common/BoardConfigCommon.mk
 
@@ -29,7 +26,3 @@ BOARD_USES_ALSA_AUDIO              := true
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 USE_CUSTOM_AUDIO_POLICY            := 1
 USE_XML_AUDIO_POLICY_CONF          := 1
-
-# Touchscreen
-TARGET_TAP_TO_WAKE_NODE := "/sys/class/sec/sec_touchscreen/wake_gesture"
-
