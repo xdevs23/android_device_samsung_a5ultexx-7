@@ -29,10 +29,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 	$(LOCAL_PATH)/overlay-lineage
 
 # Telephony
-PRODUCT_PACKAGES += \                 qti-telephony-common \ 
-                   telephony-ext 
-PRODUCT_BOOT_JARS += \ 
-                    telephony-ext
+PRODUCT_PACKAGES += \
+    qti-telephony-common \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
