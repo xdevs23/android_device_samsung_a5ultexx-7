@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/samsung/msm8916-common/msm8916.mk)
 
 #Inherit from vendor
-$(call inherit-product-if-exists, vendor/samsung/a5-common/a5-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/a5-common/a5-common-vendor-blobs.mk)
 
 LOCAL_PATH := device/samsung/a5-common
 
