@@ -40,6 +40,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     InputDisabler
 
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 
