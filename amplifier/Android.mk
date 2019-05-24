@@ -13,8 +13,9 @@ LOCAL_SRC_FILES := \
 	audio_amplifier.c
 
 LOCAL_MODULE := audio_amplifier.msm8916
-LOCAL_MODULE_RELATIVE_PATH := vendor/lib/hw
+LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 LOCAL_CFLAGS = -Werror
 
 include $(BUILD_SHARED_LIBRARY)
