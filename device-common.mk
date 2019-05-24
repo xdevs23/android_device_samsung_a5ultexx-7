@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Touch issue workaround
+PRODUCT_PACKAGES += \
+    InputDisabler
+
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 
