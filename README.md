@@ -45,7 +45,6 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
     <!-- Device-Common -->
     <project name="Soft-Bullet/android_device_samsung_a5-common" path="device/samsung/a5-common" remote="github" revision="master" />
     
-    
     <!-- Kernel -->
     <project name="Soft-Bullet/android_kernel_samsung_msm8916" path="kernel/samsung/msm8916" remote="github" revision="lineage-16.0" />
        
