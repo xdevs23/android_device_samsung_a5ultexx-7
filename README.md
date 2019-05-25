@@ -16,3 +16,46 @@ Dimensions | 139.3 x 69.7 x 6.7 mm (5.48 x 2.74 x 0.26 in)
 Display | 1280 x 720 (qHD), 5.0"
 Rear Camera  | 13.0 MP, LED flash, S.LSI. S5K4H5YB/ IMX219
 Front Camera | 5.0 MP, S.LSI. S5K5E3YX
+
+
+
+For build Unofficial Android Pie 9.0 add this into your local romservice.xml
+
+mkdir .repo/local_manifests
+
+nano .repo/local_manifests/roomservice.xml
+
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+
+<?xml version="1.0" encoding="UTF-8"?>
+  <manifest>
+  
+    <!-- LOS -->
+    <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-16.0" />
+    <project name="LineageOS/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" revision="lineage-16.0" />
+    <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
+    <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-16.0" />
+    
+    <!-- MSM8916-Common -->
+    <project name="Soft-Bullet/android_device_samsung_msm8916-common" path="device/samsung/msm8916-common" remote="github" revision="lineage-16.0" />
+   
+    <!-- Device -->
+    <project name="Soft-Bullet/android_device_samsung_a5ultexx" path="device/samsung/a5ultexx" remote="github" revision="lineage-16.0" />
+    
+    <!-- Device-Common -->
+    <project name="Soft-Bullet/android_device_samsung_a5-common" path="device/samsung/a5-common" remote="github" revision="master" />
+    
+    
+    <!-- Kernel -->
+    <project name="Soft-Bullet/android_kernel_samsung_msm8916" path="kernel/samsung/msm8916" remote="github" revision="lineage-16.0" />
+       
+    <!-- Vendor -->
+    <project name="Soft-Bullet/android_vendor_samsung" path="vendor/samsung" remote="github" revision="lineage-16.0" />
+	
+  </manifest>
+
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+
+. build/envsetup.sh
+
+brunch a5ultexx
