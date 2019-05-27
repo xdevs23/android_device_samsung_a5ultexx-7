@@ -334,6 +334,33 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
 
+# Telephony
+PRODUCT_PACKAGES += \
+    qti-telephony-common \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+# Touch issue workaround
+PRODUCT_PACKAGES += \
+    InputDisabler
+
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
+# Include package config fragments
+include $(LOCAL_PATH)/product/*.mk
+
+# append the updater uri to the product properties if set
+ifneq ($(CM_UPDATER_OTA_URI),)
+	PRODUCT_PROPERTY_OVERRIDES += $(CM_UPDATER_OTA_URI)
+endif
+
+# Inhert dalvik heap values from aosp
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
