@@ -272,4 +272,3 @@ $(shell mkdir -p $(TARGET_OUT_VENDOR)/etc/wifi; \
 include $(CLEAR_VARS)
 
 endif
-endif
