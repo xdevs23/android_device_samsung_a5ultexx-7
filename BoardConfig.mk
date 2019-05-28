@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/samsung/a5-common
+LOCAL_PATH := device/samsung/a5ultexx
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -37,6 +37,9 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := a5ulte,a5ultexx,a5lte,a5ltexx,a5lte,a53gxx,a53g
 
 # Audio
 AUDIO_CONFIG_PATH := hardware/qcom/audio-caf/msm8916/configs
@@ -178,6 +181,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_a5u_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SELINUX_LOG_CONFIG := selinux_log_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
@@ -213,12 +217,14 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 PRODUCT_DISABLE_SCUDO := true
 
 # Properties
-TARGET_SYSTEM_PROP := device/samsung/a5-common/system.prop
+TARGET_SYSTEM_PROP := device/samsung/a5ultexx/system.prop
 
 # Partition sizes
 BOARD_BOOTIMAGE_PARTITION_SIZE      := 13631488
 BOARD_RECOVERYIMAGE_PARTITION_SIZE  := 15728640
 BOARD_CACHEIMAGE_PARTITION_SIZE     := 314572800
+BOARD_SYSTEMIMAGE_PARTITION_SIZE    := 2336096256
+BOARD_USERDATAIMAGE_PARTITION_SIZE  := 12775813120
 BOARD_FLASH_BLOCK_SIZE              := 131072
 
 # Legacy BLOB Support
@@ -242,7 +248,7 @@ USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY := true
 TARGET_USES_NEW_ION_API := true
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/a5-common/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/a5ultexx/recovery/recovery_keys.c
 BOARD_HAS_NO_MISC_PARTITION	:= true
 BOARD_HAS_NO_SELECT_BUTTON	:= true
 BOARD_RECOVERY_SWIPE 		:= true
@@ -258,6 +264,7 @@ TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
 TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 
 # RIL
+SIM_COUNT := 2
 BOARD_MODEM_TYPE := xmm7260
 BOARD_PROVIDES_LIBRIL := true
 
