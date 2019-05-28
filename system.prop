@@ -76,7 +76,7 @@ ro.qualcomm.bluetooth.pbap=true
 # Misc.
 ro.chipname=MSM8916
 ro.warmboot.capability=1
-ro.qualcomm.cabl=0
+ro.qualcomm.cabl=2
 
 # GPS
 persist.gps.qmienabled=true
@@ -108,6 +108,7 @@ persist.media.treble_omx=false
 camera.disable_treble=true
 
 # ZRAM
+ro.config.low_ram=false
 ro.config.zram=true
 
 # Camera
