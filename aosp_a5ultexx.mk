@@ -17,9 +17,6 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from commom
-$(call inherit-product, device/samsung/a5-common/aosp.mk)
-
 # Inherit device configuration
 $(call inherit-product, device/samsung/a5ultexx/device.mk)
 
