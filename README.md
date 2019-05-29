@@ -35,7 +35,7 @@ nano .repo/local_manifests/roomservice.xml
     <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-16.0" />
     
     <!-- Device -->
-    <project name="Soft-Bullet/android_device_samsung_a5ultexx-7" path="device/samsung/a5ultexx" remote="github" revision="lineage-16.0" />
+    <project name="Soft-Bullet/android_device_samsung_a5ultexx-7" path="device/samsung/a5ultexx" remote="github" revision="pie" />
     
     <!-- Kernel -->
     <project name="Soft-Bullet/android_kernel_samsung_msm8916" path="kernel/samsung/msm8916" remote="github" revision="lineage-16.0" />
