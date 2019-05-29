@@ -259,7 +259,7 @@ BOARD_USES_MMCUTILS	:= true
 RECOVERY_GRAPHICS_USE_LINELENGTH	:= true
 RECOVERY_SDCARD_ON_DATA	:= true
 TARGET_RECOVERY_DENSITY	:= hdpi
-TARGET_RECOVERY_FSTAB	:= device/samsung/a5-common/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB	:= device/samsung/a5ultexx/recovery/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
 TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 
