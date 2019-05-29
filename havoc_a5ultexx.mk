@@ -48,9 +48,9 @@ TARGET_GAPPS_ARCH := arm
 TARGET_MINIMAL_APPS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="ks01lte" \
-    PRODUCT_NAME="ks01ltexx" \
-    PRIVATE_BUILD_DESC="ks01ltexx-user 5.0.1 LRX22C I9506XXSDPL2 release-keys"
+    TARGET_DEVICE="a5ultexx" \
+    PRODUCT_NAME="a5ultexx" \
+    PRIVATE_BUILD_DESC="a5ultexx-user 6.0.1 MMB29M A500FUXXS1CPK6 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by build.prop
-BUILD_FINGERPRINT := samsung/ks01ltexx/ks01lte:5.0.1/LRX22C/I9506XXSDPL2:user/release-keys
+BUILD_FINGERPRINT := samsung/a5ultexx/a5ulte:6.0.1/MMB29M/A500FUXXS1CPK6:user/release-keys
