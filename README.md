@@ -1,6 +1,6 @@
-# android_device_samsung_a5-common
+# android_device_samsung_a5ultexx
 
-## Common device tree for Samsung Galaxy A5 2015 devices
+## Device tree for Samsung Galaxy A5 2015 devices
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -25,8 +25,6 @@ mkdir .repo/local_manifests
 
 nano .repo/local_manifests/roomservice.xml
 
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
   
@@ -36,14 +34,8 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
     <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
     <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-16.0" />
     
-    <!-- MSM8916-Common -->
-    <project name="Soft-Bullet/android_device_samsung_msm8916-common" path="device/samsung/msm8916-common" remote="github" revision="lineage-16.0" />
-   
     <!-- Device -->
-    <project name="Soft-Bullet/android_device_samsung_a5ultexx" path="device/samsung/a5ultexx" remote="github" revision="lineage-16.0" />
-    
-    <!-- Device-Common -->
-    <project name="Soft-Bullet/android_device_samsung_a5-common" path="device/samsung/a5-common" remote="github" revision="master" />
+    <project name="Soft-Bullet/android_device_samsung_a5ultexx-7" path="device/samsung/a5ultexx" remote="github" revision="lineage-16.0" />
     
     <!-- Kernel -->
     <project name="Soft-Bullet/android_kernel_samsung_msm8916" path="kernel/samsung/msm8916" remote="github" revision="lineage-16.0" />
