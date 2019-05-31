@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Include proprietary blobs
 $(call inherit-product-if-exists, vendor/samsung/a5-common/a5-common-vendor.mk)
 
+# Include proprietary blobs
+$(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
+
 LOCAL_PATH := device/samsung/a5ultexx
 
 # Overlays
