@@ -19,6 +19,9 @@ $(call inherit-product-if-exists, device/samsung/qcom-common/qcom-common.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# Inherit from vendor
+$(call inherit-product-if-exists, vendor/samsung/a5ultexx/a5ultexx-vendor-blobs.mk)
+
 # Include proprietary blobs
 $(call inherit-product-if-exists, vendor/samsung/a5-common/a5-common-vendor.mk)
 
