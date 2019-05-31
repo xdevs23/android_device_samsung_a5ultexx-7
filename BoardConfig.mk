@@ -55,18 +55,6 @@ USE_XML_AUDIO_POLICY_CONF := 1
 USE_CUSTOM_MIXER_PATHS := true
 USE_CUSTOM_AUDIO_PLATFORM_INFO := true 
 
-#XML Audio configuration files
-ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
-PRODUCT_COPY_FILES += \
-#   $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(AUDIO_CONFIG_PATH)/msm8916_32/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/a2dp_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/usb_audio_policy_configuration.xml
-endif
-
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
@@ -154,11 +142,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.lineage
 
 # Init
-#TARGET_INIT_VENDOR_LIB := libinit_msm8916
-#TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8916
-
-# Init
-TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(LOCAL_PATH)/init/init_a5.cpp
+TARGET_LIBINIT_MSM8916_DEFINES_FILE := device/samsung/a5ultexx/init/init_a5.cpp
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
@@ -180,6 +164,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 LZMA_RAMDISK_TARGETS := recovery
+TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_a5u_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
@@ -318,7 +303,6 @@ BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 BOARD_VOLD_MAX_PARTITIONS := 67
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# Wifi
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true
 BOARD_HAS_QCOM_WLAN := true
