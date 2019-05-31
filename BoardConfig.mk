@@ -18,9 +18,6 @@ LOCAL_PATH := device/samsung/a5ultexx
 # Inherit device configuration
 $(call inherit-product, device/samsung/a5ultexx/device.mk)
 
-#Inherit from vendor
-$(call inherit-product-if-exists, vendor/samsung/a5ultexx/a5ultexx-vendor-blobs.mk)
-
 # Includes
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
